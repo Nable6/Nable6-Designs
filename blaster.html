@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo_Nable6.png">
+    <title>Blaster E-11 | Nable6 Designs</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=15">
+    <style>
+        .product-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 150px 5% 40px;
+            display: grid;
+            grid-template-columns: 0.9fr 1fr;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .main-image-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            padding-bottom: 100%; /* Square aspect ratio */
+        }
+
+        .main-image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnails-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition-smooth);
+            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail.active, .thumbnail:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+        }
+
+        .product-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .product-description {
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #ccc;
+            font-size: 1.05rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-features li::before {
+            content: '▹';
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
+            opacity: 0;
+        }
+
+        .accordion-content.open {
+            max-height: 600px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .accordion-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-btn.open svg {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 900px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="noise-overlay"></div>
+    <div id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <a href="index.html#home" class="nav-left" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+            <img src="assets/logo_Nable6.png" alt="Nable6 Logo"
+                style="height: 45px; filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.4)); transition: var(--transition-smooth);">
+            <div class="logo">
+                <span class="logo-bold">Nable6</span><span class="logo-light">Designs</span>
+            </div>
+        </a>
+        
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html#home">Retour à l'Accueil</a></li>
+                <li><a href="index.html#expertise">Arsenal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="product-container">
+            <!-- Left Column: Gallery -->
+            <div class="product-gallery">
+                <div class="main-image-container glass-card style-2">
+                    <img id="main-product-image" src="assets/20260419_161435.jpg" alt="Blaster E-11" style="filter: brightness(0.85);">
+                </div>
+            </div>
+
+            <!-- Right Column: Product Details -->
+            <div class="product-info glass-card" style="padding: 40px;">
+                <h1 class="product-title" style="line-height: 1.2;">
+                    <span style="color: #fff;">Blaster E-11</span>
+                </h1>
+                <p class="product-price">150 €</p>
+                
+                <div class="product-description">
+                    <p>Réplique de haute qualité imprimée en 3D du célèbre Blaster E-11. Parfait pour le cosplay ou l'exposition.</p>
+                </div>
+
+                <ul class="product-features">
+                    <li>Impression 3D haute résolution</li>
+                    <li>Finitions soignées et peinture détaillée</li>
+                    <li>Échelle 1:1</li>
+                </ul>
+
+                <div style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                    <a href="projet.html?sujet=Blaster+E-11" class="btn-primary" style="display: block; text-align: center; font-size: 1.1rem; padding: 15px;">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Full Width Row: Customization details -->
+            <div style="grid-column: 1 / -1;">
+                <button class="accordion-btn glass-card style-2" id="custom-accordion-btn" style="width: 100%; padding: 25px 40px; display: flex; justify-content: center; align-items: center; gap: 20px; border: none; cursor: pointer; background: rgba(255, 255, 255, 0.03);">
+                    <span style="color: var(--accent-blue); font-size: 1.2rem; font-family: 'Montserrat', sans-serif;"><strong>Achat sur contact uniquement</strong></span>
+                    <span style="color: rgba(255,255,255,0.2); font-size: 1.2rem;">|</span>
+                    <svg width="16" height="10" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--accent-blue); flex-shrink: 0;">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="accordion-content glass-card" id="custom-accordion-content" style="padding: 0 40px; border: none; background: rgba(0, 0, 0, 0.2);">
+                    <div style="padding: 30px 0; color: #ccc; font-size: 1.05rem; line-height: 1.6;">
+                        <p style="margin-bottom: 20px; font-size: 0.95rem;">Il n'est pas possible d'acheter directement sur le site. Pour acquérir cette création, veuillez utiliser le bouton de devis ci-dessus pour discuter de votre projet.</p>
+                        
+                        <p style="margin-bottom: 15px;"><strong>Création artisanale & Unique</strong><br>
+                        Toutes mes pièces sont finies et peintes à la main dans mon atelier. Chaque pièce est donc une création unique et peut présenter de légères différences par rapport aux photos présentées.</p>
+
+                        <p><strong>Personnalisation sur mesure</strong><br>
+                        Vous souhaitez une pièce à votre image ? Tout est modifiable sur demande ! N'hésitez pas à me préciser si vous désirez :</p>
+                        <ul style="margin-top: 5px; padding-left: 20px; margin-bottom: 0;">
+                            <li>Des couleurs ou motifs personnalisés.</li>
+                            <li>Une finition spécifique (sortie d'usine, usé par les combats, abîmé, mat...).</li>
+                            <li>L'ajout d'accessoires.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fichier 3D Section -->
+        <section class="expertise-section" style="padding-top: 20px; padding-bottom: 50px;">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 5%;">
+                <h3 style="font-size: 2rem; color: #fff; font-family: 'Orbitron', sans-serif;">Téléchargez le <span class="text-accent">fichier 3D</span> de cette arme</h3>
+            </div>
+
+            <div class="gallery-grid" style="max-width: 1400px; margin: 0 auto; padding: 0 5%;">
+                <!-- Fichier 3D -->
+                <a href="#" class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg"><span class="placeholder-icon">📥</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Fichier STL - Blaster E-11</div>
+                        <div class="gallery-price">Lien à venir</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projets Similaires Section -->
+        <section class="expertise-section" style="padding-top: 50px; padding-bottom: 100px;">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 5%;">
+                <h3 style="font-size: 2rem; color: #fff; font-family: 'Orbitron', sans-serif;">Projets <span class="text-accent">Similaires</span></h3>
+            </div>
+
+            <div class="gallery-grid" style="max-width: 1400px; margin: 0 auto; padding: 0 5%;">
+                <!-- Exemple d'article -->
+                <a href="produit.html" class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg" style="background-image: url('assets/IMG_5322.JPG');"></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Casque Clone 501st</div>
+                        <div class="gallery-price">250 €</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-bold">Nable6</span><span class="logo-light">Designs</span>
+                </div>
+                <p>Conception 3D et fabrication d'accessoires sur-mesure.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="index.html#home">Accueil</a>
+                <a href="index.html#custom-project">Fabrication Sur Mesure</a>
+                <a href="index.html#expertise">Arsenal</a>
+                <a href="index.html#portfolio">Modélisation 3D</a>
+            </div>
+            <div class="footer-contact" id="contact">
+                <h4>Contact</h4>
+                <p>nable6.designs@gmail.com</p>
+                <h4 style="margin-top: 20px;">Réseaux</h4>
+                <div class="social-links">
+                    <a href="https://cults3d.com/@Nable6" target="_blank" title="Cults3D"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></a>
+                    <a href="https://www.instagram.com/nable6_designs/" target="_blank" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://www.youtube.com/@nable6designer107" target="_blank" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="flex-direction: column; gap: 15px; align-items: center; text-align: center;">
+            <div class="legal-mentions" style="font-size: 0.85rem; color: #888; max-width: 800px; line-height: 1.5;">
+                <p style="margin-bottom: 0;"><strong>Mentions Légales :</strong> Site édité par Nable6.</p>
+            </div>
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: 10px; flex-wrap: wrap; gap: 15px;">
+                <p style="margin: 0;">&copy; 2026 Nable6 Designs. Tous droits réservés.</p>
+                <div class="sys-status">
+                    <span class="status-dot"></span> System Online
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Accordion Logic
+            const accordionBtn = document.getElementById('custom-accordion-btn');
+            const accordionContent = document.getElementById('custom-accordion-content');
+            
+            if (accordionBtn && accordionContent) {
+                accordionBtn.addEventListener('click', () => {
+                    accordionBtn.classList.toggle('open');
+                    accordionContent.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

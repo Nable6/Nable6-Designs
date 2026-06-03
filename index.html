@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo_Nable6.png">
+    <title>Nable6 Designs | Conception 3D & Fabrication Cosplay</title>
+    <meta name="description"
+        content="Conception 3D, impression et fabrication sur-mesure de casques, armures, armes factices et accessoires pour le cosplay.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=13">
+</head>
+
+<body>
+    <div id="noise-overlay"></div>
+    <div id="cursor-glow"></div>
+
+    <nav class="navbar">
+        <a href="#home" class="nav-left" style="display: flex; align-items: center; gap: 15px;">
+            <img src="assets/logo_Nable6.png" alt="Nable6 Logo"
+                style="height: 45px; filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.4)); transition: var(--transition-smooth);">
+            <div class="logo">
+                <span class="logo-bold">Nable6</span><span class="logo-light">Designs</span>
+            </div>
+        </a>
+
+        <div class="nav-center">
+        </div>
+
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="projet.html" class="btn-outline">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Service 1: 3D Modeling Section -->
+        <section id="service-3d" class="custom-cta-section service-section">
+            <div class="cta-container glass-card reverse-layout">
+                <div class="cta-content text-left">
+                    <h1 class="hero-title" style="font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1.2;">Nable6 <span
+                            class="text-accent">Designs</span></h1>
+                    <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-top: 15px;">Conception 3D,
+                        impression et fabrication sur-mesure d'armements, armures et accessoires pour le cosplay.</p>
+                    <div class="hero-actions" style="justify-content: flex-start; flex-wrap: wrap; margin-top: 2rem;">
+                        <a href="#custom-project" class="btn-secondary">Fabrication Sur Mesure</a>
+                        <a href="#expertise" class="btn-outline">Arsenal</a>
+                        <a href="#portfolio" class="btn-secondary">Modélisation 3D</a>
+                    </div>
+                </div>
+                <div class="cta-visual visual-large">
+                    <div class="cta-glow glow-blue"></div>
+                    <!-- Emplacement pour votre fichier vidéo MP4 -->
+                    <video autoplay loop muted playsinline aria-label="Casque Mandalorian 3D"
+                        style="width: 100%; height: auto; position: relative; z-index: 5; border-radius: 8px;">
+                        <source src="assets/casque_mando_logo.540.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la vidéo HTML5.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Project CTA Section (Service 2) -->
+        <section id="custom-project" class="custom-cta-section service-section">
+            <div class="section-header" style="text-align: center; margin-bottom: 20px;">
+                <h2>Transformez vos <br><span class="text-accent">Idées en Réalité</span></h2>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn left-btn" id="prev-btn">&lt;</button>
+                <div class="carousel-container" id="project-carousel">
+                    <!-- Card 1 -->
+                    <div class="carousel-card glass-card"
+                        style="background-image: linear-gradient(rgba(5, 0, 0, 0.75), rgba(5, 0, 0, 0.75)), url('assets/3328.jpg'); background-repeat: no-repeat, no-repeat; background-size: 100% 100%, cover; background-position: center, center calc(50% + 15px);">
+                        <div class="cta-content"
+                            style="position: absolute; bottom: 50px; left: 0; width: 100%; text-align: center; padding: 0 30px;">
+                            <h2
+                                style="font-size: 2.2rem; margin: 0; color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">
+                                Casques et Armures, Cosplays</h2>
+                        </div>
+                        <div class="slide-number">01</div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="carousel-card glass-card"
+                        style="background-image: linear-gradient(rgba(5, 0, 0, 0.75), rgba(5, 0, 0, 0.75)), url('assets/20260419_161713.jpg'); background-repeat: no-repeat, no-repeat; background-size: 100% 100%, cover; background-position: center, center;">
+                        <div class="cta-content"
+                            style="position: absolute; bottom: 50px; left: 0; width: 100%; text-align: center; padding: 0 30px;">
+                            <h2
+                                style="font-size: 2.2rem; margin: 0; color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">
+                                Armes Factices, Répliques</h2>
+                        </div>
+                        <div class="slide-number">02</div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="carousel-card glass-card"
+                        style="background-image: linear-gradient(rgba(5, 0, 0, 0.75), rgba(5, 0, 0, 0.75)), url('assets/20260426_192748.jpg'); background-repeat: no-repeat, no-repeat; background-size: 100% 100%, cover; background-position: center, center;">
+                        <div class="cta-content"
+                            style="position: absolute; bottom: 50px; left: 0; width: 100%; text-align: center; padding: 0 30px;">
+                            <h2
+                                style="font-size: 2.2rem; margin: 0; color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">
+                                Autres Accessoires</h2>
+                        </div>
+                        <div class="slide-number">03</div>
+                    </div>
+                </div>
+                <button class="carousel-btn right-btn" id="next-btn">&gt;</button>
+            </div>
+
+            <div class="carousel-indicators">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="projet.html" class="btn-primary cta-btn">Démarrer un Projet Custom</a>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="expertise-section">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2><span class="text-accent">Arsenal</span></h2>
+                <p
+                    style="margin-top: 20px; font-size: 1.1rem; color: #ccc; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Retrouvez ici les armures, armes et accessoires pour cosplay déjà disponibles.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- 1 -->
+                <a href="produit.html" class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg" style="background-image: url('assets/IMG_5322.JPG');"></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Casque clone 501e Legion</div>
+                        <div class="gallery-price">250 €</div>
+                    </div>
+                </a>
+                <!-- 2 -->
+                <a href="blaster.html" class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg"
+                        style="background-image: url('assets/20260419_161435.jpg'); filter: brightness(0.85);"></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Blaster E-11</div>
+                        <div class="gallery-price">150 €</div>
+                    </div>
+                </a>
+                <!-- 3 -->
+                <a href="casque_332.html" class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg"
+                        style="background-image: url('assets/IMG_5362.JPG');"></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Casque Clone 332nd</div>
+                        <div class="gallery-price">250 €</div>
+                    </div>
+                </a>
+                <!-- 4 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="expertise-section">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2>Modélisation 3D</h2>
+                <p
+                    style="margin-top: 20px; font-size: 1.1rem; color: #ccc; max-width: 650px; margin-left: auto; margin-right: auto;">
+                    Retrouvez ici les fichiers d'impressions 3D disponibles, ou contactez moi pour un projet
+                    personalisé.</p>
+                <div style="margin-top: 30px;">
+                    <a href="projet.html?sujet=Plan+3D" class="btn-primary" style="box-shadow: none;">Projet 3D
+                        personalisé</a>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- 1 -->
+                <a href="https://cults3d.com/:1782267" target="_blank" rel="noopener noreferrer"
+                    class="gallery-item glass-card style-2" style="text-decoration: none;">
+                    <div class="gallery-bg" style="background-image: url('assets/Casque_clone.268.gif');"></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Casque Clone - Fichier 3D</div>
+                    </div>
+                </a>
+                <!-- 2 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="gallery-item glass-card style-2">
+                    <div class="gallery-bg"><span class="placeholder-icon">📷</span></div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Projet à venir</div>
+                        <div class="gallery-price">Sur Devis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-bold">Nable6</span><span class="logo-light">Designs</span>
+                </div>
+                <p>Conception 3D et fabrication d'accessoires sur-mesure.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#home">Accueil</a>
+                <a href="#custom-project">Fabrication Sur Mesure</a>
+                <a href="#expertise">Arsenal</a>
+                <a href="#portfolio">Modélisation 3D</a>
+            </div>
+            <div class="footer-contact" id="contact">
+                <h4>Contact</h4>
+                <p>nable6.designs@gmail.com</p>
+                <h4 style="margin-top: 20px;">Réseaux</h4>
+                <div class="social-links">
+                    <a href="https://cults3d.com/@Nable6" target="_blank" title="Cults3D"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></a>
+                    <a href="https://www.instagram.com/nable6_designs/" target="_blank" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://www.youtube.com/@nable6designer107" target="_blank" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="flex-direction: column; gap: 15px; align-items: center; text-align: center;">
+            <div class="legal-mentions" style="font-size: 0.85rem; color: #888; max-width: 800px; line-height: 1.5;">
+                <p style="margin-bottom: 0;"><strong>Mentions Légales :</strong> Site édité par Nable6.</p>
+            </div>
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: 10px; flex-wrap: wrap; gap: 15px;">
+                <p style="margin: 0;">&copy; 2026 Nable6 Designs. Tous droits réservés.</p>
+                <div class="sys-status">
+                    <span class="status-dot"></span> System Online
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
